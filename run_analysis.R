@@ -64,5 +64,5 @@ final_df2 <- final_df %>%
   group_by_at(.vars = vars('subject','activity')) %>% 
   summarize_all(mean)
 
-data.table::fwrite(final_df2,'TidyData.csv')
+write.table(final_df2,'TidyData.txt',row.names = FALSE)
 
